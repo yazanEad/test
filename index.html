@@ -1,20 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <div>
-        <h2>yazan ali</h2>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum odio ipsam at voluptatem qui? Quo, itaque molestiae, excepturi aliquid, reprehenderit dolores minima qui distinctio ab dolor totam quidem ad voluptatibus?</p>
-    <hr>
-    <div>
-        <label for="">number</label>
-        <input type="number" name="" id="">
+<!doctype html>
+<html lang="ar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحة الدخول</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-box">
+        <h1>مرحباً بك</h1>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="email">البريد الإلكتروني</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="أدخل بريدك الإلكتروني"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">كلمة المرور</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              placeholder="أدخل كلمة المرور"
+            />
+          </div>
+
+          <div class="form-group checkbox">
+            <input type="checkbox" id="remember" name="remember" />
+            <label for="remember">تذكرني</label>
+          </div>
+
+          <button type="submit" class="login-btn">دخول</button>
+        </form>
+
+        <div class="links">
+          <a href="#">هل نسيت كلمة المرور؟</a>
+          <span>|</span>
+          <a href="#">إنشاء حساب جديد</a>
+        </div>
+      </div>
     </div>
-    </div>
-</body>
+
+    <script src="./main.js"></script>
+  </body>
 </html>
