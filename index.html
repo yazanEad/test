@@ -1,53 +1,39 @@
 <!doctype html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>صفحة الدخول</title>
+    <title>قائمة المهام</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="login-container">
-      <div class="login-box">
-        <h1>مرحباً بك</h1>
-        <form id="loginForm">
-          <div class="form-group">
-            <label for="email">البريد الإلكتروني</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="أدخل بريدك الإلكتروني"
-            />
-          </div>
+    <main class="todo-app">
+      <section class="todo-panel" aria-labelledby="appTitle">
+        <header class="app-header">
+          <p>تنظيم اليوم</p>
+          <h1 id="appTitle">قائمة المهام</h1>
+        </header>
 
-          <div class="form-group">
-            <label for="password">كلمة المرور</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              required
-              placeholder="أدخل كلمة المرور"
-            />
-          </div>
-
-          <div class="form-group checkbox">
-            <input type="checkbox" id="remember" name="remember" />
-            <label for="remember">تذكرني</label>
-          </div>
-
-          <button type="submit" class="login-btn">دخول</button>
+        <form class="todo-form" id="todoForm">
+          <label class="sr-only" for="todoInput">أضف مهمة جديدة</label>
+          <input
+            id="todoInput"
+            type="text"
+            placeholder="اكتب مهمة جديدة..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit">إضافة</button>
         </form>
 
-        <div class="links">
-          <a href="#">هل نسيت كلمة المرور؟</a>
-          <span>|</span>
-          <a href="#">إنشاء حساب جديد</a>
-        </div>
-      </div>
-    </div>
+        <ul class="todo-list" id="todoList" aria-live="polite"></ul>
+
+        <footer class="todo-footer">
+          <span id="taskCount">لا توجد مهام</span>
+          <button class="clear-btn" id="clearDone" type="button">حذف المكتمل</button>
+        </footer>
+      </section>
+    </main>
 
     <script src="./main.js"></script>
   </body>
